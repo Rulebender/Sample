@@ -9,7 +9,7 @@
 	
 	while($row = mysql_fetch_row($tables)){
 			
-			echo "<li><input type='radio' name='table' value='".$row[0]."'>".$row[0]."</li>";
+			echo "<li><input type='radio' onclick='uncheckall()' name='table' value='".$row[0]."'>".$row[0]."</li>";
 			
 			$result = $con->query("SHOW COLUMNS FROM ".$con->database.'.'.$row[0]);
 			
